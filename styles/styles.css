@@ -1,0 +1,272 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #c3cfe2;
+}
+
+h1, h2, footer {
+  text-align: center;
+}
+
+h2 {
+  margin: 50px 0px 30px 0px;
+}
+
+/* Part 1. Testimonial */
+.card-white {
+  margin: auto;
+  position: relative;
+  width: 400px;
+  height: 333.33px;
+  background-color: #FFF;
+  border: none;
+  border-radius: 20px 20px 0px 0px;
+  -webkit-box-shadow: 0px 5px 10px grey;
+          box-shadow: 0px 5px 10px grey;
+}
+
+.card-white p {
+  position: absolute;
+  margin: 40px 40px 0px 40px;
+  color: #555555;
+  font-weight: bold;
+  font-size: 1.21em;
+  line-height: 1.8;
+}
+
+.card-purple {
+  margin: auto;
+  position: relative;
+  width: 400px;
+  height: 166.66px;
+  top: 0px;
+  color: #FFF;
+  text-align: center;
+  border: none;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #686de0;
+  -webkit-box-shadow: 0px 5px 10px grey;
+          box-shadow: 0px 5px 10px grey;
+}
+
+.card-purple img {
+  width: 110px;
+  border: solid 5px #fff;
+  border-radius: 50%;
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
+.card-purple p {
+  margin: -50px 0px 8px 0px;
+  letter-spacing: 1.75px;
+  font-size: 1.21em;
+  text-transform: uppercase;
+}
+
+.card-purple a {
+  color: #c3cfe2;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* Part 2. Portfolio Grid */
+.container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 10px 20px;
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000019;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.photo img {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.photo p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #FFF;
+  color: black;
+  font-size: 0.8em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: -5px;
+  white-space: nowrap;
+}
+
+.photo:hover img {
+  opacity: 0.0;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 700px) {
+  .container {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 10px 20px;
+  }
+}
+
+/*Part 3: Social Media Buttons*/
+.social-media {
+  overflow-x: hidden;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: -8px;
+}
+
+.social-media a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFF;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+.social-media .fas, .social-media .fab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFF;
+}
+
+.blog {
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  width: 240px;
+  height: 40px;
+  -webkit-transform: translateX(210px);
+          transform: translateX(210px);
+  background-color: #e17b77;
+  padding-left: 12px;
+  width: 243px;
+}
+
+.twitter {
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  width: 240px;
+  height: 40px;
+  -webkit-transform: translateX(210px);
+          transform: translateX(210px);
+  background-color: #00aced;
+}
+
+.linkedin {
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  width: 240px;
+  height: 40px;
+  -webkit-transform: translateX(210px);
+          transform: translateX(210px);
+  background-color: #007bb6;
+}
+
+.facebook {
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  width: 240px;
+  height: 40px;
+  -webkit-transform: translateX(210px);
+          transform: translateX(210px);
+  background-color: #3b5998;
+}
+
+.github {
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  width: 240px;
+  height: 40px;
+  -webkit-transform: translateX(210px);
+          transform: translateX(210px);
+  background-color: #333;
+}
+
+.blog:hover, .twitter:hover, .linkedin:hover, .facebook:hover, .github:hover {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+/*# sourceMappingURL=styles.css.map */
