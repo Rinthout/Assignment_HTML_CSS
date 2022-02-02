@@ -1,0 +1,64 @@
+@mixin social-media-button {
+    left:100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 240px;
+    height: 40px;
+    transform:translateX(210px);
+    transition: 500ms;
+}
+
+
+
+.social-media {
+    overflow-x: hidden;
+    display: grid;
+    justify-content: end;
+    margin-right: -8px;
+    a {
+        display: flex;
+        color: #FFF;
+        padding-left: 30px;
+        padding-bottom: 5px;
+    }
+    .fas, .fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    } 
+}
+
+.blog {
+    @include social-media-button();
+    background-color: $blogcolor;
+    padding-left: 12px;
+    width: 243px;
+}
+
+.twitter {
+    @include social-media-button();
+    background-color: $twittercolor;
+}
+
+.linkedin {
+    @include social-media-button();
+    background-color: $linkedincolor;
+}
+
+.facebook {
+    @include social-media-button();
+    background-color: $facebookcolor;
+}
+
+.github {
+    @include social-media-button();
+    background-color: $githubcolor;
+}
+
+.blog:hover, .twitter:hover, .linkedin:hover, .facebook:hover, .github:hover  {
+    transform:translateX(0px);
+    transition-timing-function: linear;
+
+}
